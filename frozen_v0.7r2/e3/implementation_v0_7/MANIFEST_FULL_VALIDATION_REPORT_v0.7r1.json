@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scientific_model_data": false,
+  "hashes": {
+    "E3A_MANIFEST_CANDIDATE_v0.7r1.json": "83c33aade50bca0c55482cd6ddd6711efd82f86674feb19b4cd77259679ab6a4",
+    "E3B_F1_MANIFEST_CANDIDATE_v0.7r1.json": "e593b4f9b6a6a9a43ed8011d235c816cf9e1fcfe1a227b3b11b5c4237a55ecfe",
+    "E3B_F2_MANIFEST_CANDIDATE_v0.7r1.json": "1d7b1395508ffd73375b47fac08d26fdfb52697d15b024ca3460dd3877e37453",
+    "E3B_F3_MANIFEST_CANDIDATE_v0.7r1.json": "62e2fbb830e06167745c8fef4b961fe7cf43cf69cbce74583e80bc40b80e7464",
+    "E3B_F4_MANIFEST_CANDIDATE_v0.7r1.json": "ec6dc9eaf8f9235f9e0df0f3126cd54af03862f16f9c3ecc1afe8d9ca0a65ff4"
+  },
+  "counters": {
+    "pair_count": 72,
+    "forced_sequences": 15012,
+    "parity_sequences": 31644,
+    "control_decisive": 72
+  },
+  "disjointness": {
+    "F1": {"parameter_overlap": 0, "instance_overlap": 0, "observable_collisions": 0, "TRUE": 6, "FALSE": 6, "ALPHA": 6, "BETA": 6},
+    "F2": {"parameter_overlap": 0, "instance_overlap": 0, "observable_collisions": 0, "TRUE": 6, "FALSE": 6, "ALPHA": 6, "BETA": 6},
+    "F3": {"parameter_overlap": 0, "instance_overlap": 0, "observable_collisions": 0, "TRUE": 6, "FALSE": 6, "ALPHA": 6, "BETA": 6},
+    "F4": {"parameter_overlap": 0, "instance_overlap": 0, "observable_collisions": 0, "TRUE": 6, "FALSE": 6, "ALPHA": 6, "BETA": 6}
+  },
+  "failures": []
+}

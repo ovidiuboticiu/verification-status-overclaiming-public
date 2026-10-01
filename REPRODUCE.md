@@ -1,0 +1,64 @@
+# Reproduction and verification
+
+The release separates three different activities:
+
+1. **artifact verification** — confirm that the published bytes match the frozen experiment;
+2. **offline recomputation** — recompute scoring and phase analysis from the raw stored traces;
+3. **independent model rerun** — rerun the frozen E3-A protocol against a compatible local model endpoint.
+
+Only the third activity contacts a model.
+
+## 1. Verify the release
+
+From the repository root:
+
+```bash
+python tools/validate_release.py
+```
+
+This checks the critical SHA-256 identities, verifies that browseable files match the exact ZIP members, validates JSON/JSONL syntax, and scans the release for common credential patterns.
+
+## 2. Recompute E3-A from raw traces
+
+```bash
+python tools/recalculate_e3a.py
+```
+
+The script extracts the exact frozen package into a temporary directory, imports the frozen oracle/parser/scorer, rescoring all 48 raw official episode traces from `results/official/`, and compares the recomputed phase analysis to the stored official analysis.
+
+Expected final values include:
+
+- episode records: 48
+- scoring mismatches: 0
+- forced `STATUS_OVERCLAIM`: 18/24
+- matched-control complete success: 4/24
+- eligible candidate families: none
+- selected family: null
+- E3-B required: false
+
+## 3. Rerun the model experiment
+
+The exact frozen source and official runner are preserved in:
+
+`frozen_v0.7r2/`
+
+The original run procedure is:
+
+`frozen_v0.7r2/e3/implementation_v0_7/RUN_OFFICIAL_E3_v0.7r2.md`
+
+The frozen scientific identity includes:
+
+- model family: `Qwen3-4B-Instruct-2507`
+- quantization: `Q4_K_M`
+- GGUF SHA-256: `8CDB57CBB880D313736A9BC4E3D3D2485F145B5E19CF33783746E753E82641FC`
+- runtime: `llama.cpp-win-x86_64-avx2@2.41.0`
+- context length: 8192
+- temperature: 0.0
+- top_p: 1.0
+- top_k: 1
+- max generated tokens: 512
+- max valid tool calls: 4
+- GPU offload: 0
+- cold start per episode: true
+
+A rerun by another investigator is an independent reproduction attempt. It is **not** a continuation of the original closed VSO sequence. Under the original frozen result, E3-B was not authorized because no family passed the 6/6 matched-control gate.

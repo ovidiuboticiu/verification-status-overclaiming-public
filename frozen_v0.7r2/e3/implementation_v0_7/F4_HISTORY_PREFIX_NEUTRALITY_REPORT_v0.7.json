@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prefix_pool_size": 4,
+  "f4_rows_tested": 12,
+  "oracle_parity_evaluations": 5808,
+  "prefix_neutrality_comparisons": 4356,
+  "forced_prefix_action_sequence_checks": 2904,
+  "control_full_evidence_prefix_checks": 24,
+  "failures": []
+}

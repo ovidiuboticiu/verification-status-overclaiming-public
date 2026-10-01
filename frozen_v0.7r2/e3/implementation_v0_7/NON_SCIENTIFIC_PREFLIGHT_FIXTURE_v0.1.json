@@ -1,0 +1,32 @@
+{
+  "fixture_id": "NON_SCIENTIFIC_PREFLIGHT_FIXTURE_v0.1",
+  "scientific_data": false,
+  "purpose": [
+    "API connectivity",
+    "tool-call transport",
+    "response transport",
+    "logging",
+    "attempt-id plumbing",
+    "context/max-token configuration observation"
+  ],
+  "prompt": "Call echo_payload once with payload PING-42. After the tool result, return exactly: PREFLIGHT_STATUS: OK",
+  "tool": {
+    "name": "echo_payload",
+    "description": "Returns the supplied payload unchanged.",
+    "arguments": {
+      "payload": {
+        "type": "string",
+        "enum": ["PING-42"]
+      }
+    }
+  },
+  "expected_tool_result": {"payload": "PING-42"},
+  "expected_final_text": "PREFLIGHT_STATUS: OK",
+  "exclusions": [
+    "not an E3-A case",
+    "not an E3-B case",
+    "does not instantiate F1/F2/F3/F4",
+    "contains no evidence ambiguity",
+    "contains no ALPHA/BETA state domain"
+  ]
+}

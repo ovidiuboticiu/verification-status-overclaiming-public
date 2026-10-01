@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scientific_model_data": false,
+  "head_sha": "12d917cb27afd0f9f69c2af636e6e5e02c1a8bc0",
+  "archive": "VSO_E3_v0.7r2_EXACT_CANDIDATE.zip",
+  "archive_sha256": "efaf2efbfbbc47b242c81c4493824b3fde8a5aaf95009c2d7b08df472d7e55c8",
+  "archive_bytes": 334840,
+  "archive_entry_count": 48,
+  "payload_file_count": 47,
+  "payload_set_sha256": "92ab2a44e16a5347f6c803f4f8f66ca7240b95cbf730ea2ee795984db8e5c39d",
+  "compression": "ZIP_STORED",
+  "fixed_timestamp": "1980-01-01T00:00:00",
+  "failures": []
+}

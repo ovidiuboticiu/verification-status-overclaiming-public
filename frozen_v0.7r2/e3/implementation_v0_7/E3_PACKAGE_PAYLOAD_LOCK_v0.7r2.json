@@ -1,0 +1,248 @@
+{
+  "status": "LOCKED_EXACT_PACKAGE_PAYLOAD",
+  "package_revision": "v0.7r2",
+  "date": "2026-09-26",
+  "scientific_model_data": false,
+  "freeze_status": "NOT_FROZEN",
+  "file_count": 47,
+  "payload_set_sha256": "92ab2a44e16a5347f6c803f4f8f66ca7240b95cbf730ea2ee795984db8e5c39d",
+  "hash_definition": "SHA-256 over ASCII concat of Python-lexically sorted records: path + NUL + git_blob_sha + NUL + size + LF",
+  "manifest_revision": "v0.7r1 bytes unchanged",
+  "files": [
+    {
+      "path": "MODEL_IDENTITY.md",
+      "git_blob_sha": "1993abecf9204e873b65c096d29297576a1ccaf7",
+      "size": 1962
+    },
+    {
+      "path": "e3/E3_CANONICAL_PROTOCOL_CANDIDATE_v0.7r2.md",
+      "git_blob_sha": "42c4ca2bb5830f5d7682babe092ad6f306a7e03d",
+      "size": 18338
+    },
+    {
+      "path": "e3/E3_EXACT_PACKAGE_AUDIT_v0.7r1.md",
+      "git_blob_sha": "886baed7961f45e69ed46e712b3e34d59edea896",
+      "size": 8408
+    },
+    {
+      "path": "e3/implementation_v0_7/F4_HISTORY_PREFIX_NEUTRALITY_REPORT_v0.7.json",
+      "git_blob_sha": "5d3923c50953b2cb1b05c77983ce84318d591b8b",
+      "size": 261
+    },
+    {
+      "path": "e3/implementation_v0_7/MANIFEST_FULL_VALIDATION_REPORT_v0.7r1.json",
+      "git_blob_sha": "1a9ccd046cdb7b412a33c070a4d968829437deab",
+      "size": 1343
+    },
+    {
+      "path": "e3/implementation_v0_7/MANIFEST_V0_7R1_HASH_LOCK.json",
+      "git_blob_sha": "7953c3ad55c82d273f37833a69db3fc1eb495c80",
+      "size": 1014
+    },
+    {
+      "path": "e3/implementation_v0_7/NON_SCIENTIFIC_PREFLIGHT_FIXTURE_v0.1.json",
+      "git_blob_sha": "85a49e10a0202778aa40fbde3d40476b4b255a69",
+      "size": 900
+    },
+    {
+      "path": "e3/implementation_v0_7/NON_SCIENTIFIC_PREFLIGHT_RESULT_v0.1.json",
+      "git_blob_sha": "77c44c94e3938ec9c2ac96cc07bd837cf71e85b3",
+      "size": 1662
+    },
+    {
+      "path": "e3/implementation_v0_7/PREFREEZE_IMPLEMENTATION_CORRECTION_001.md",
+      "git_blob_sha": "c1e2acda40ef7ac3c7e61d334c745c76d0bfcccd",
+      "size": 1917
+    },
+    {
+      "path": "e3/implementation_v0_7/PREFREEZE_IMPLEMENTATION_CORRECTION_002.md",
+      "git_blob_sha": "a76f3358695784ca28e7c3230c81fb8ef9952bc9",
+      "size": 3498
+    },
+    {
+      "path": "e3/implementation_v0_7/PROMPT_TEMPLATE_PREFREEZE_v0.7r1.md",
+      "git_blob_sha": "aa693760a4efa98cd2114546c392b9804287aa40",
+      "size": 3672
+    },
+    {
+      "path": "e3/implementation_v0_7/RUN_OFFICIAL_E3_v0.7r2.md",
+      "git_blob_sha": "86e1afccc8ae01425df1d86ba5a95da0815c4aae",
+      "size": 2746
+    },
+    {
+      "path": "e3/implementation_v0_7/STAGE2_PREFREEZE_AUDIT_v0.7r1.md",
+      "git_blob_sha": "03f4a2b1742e396cb5120833649d0899ce5709bc",
+      "size": 2246
+    },
+    {
+      "path": "e3/implementation_v0_7/TECHNICAL_PREFLIGHT_EVIDENCE_v0.7r1.md",
+      "git_blob_sha": "4cf97ff9adaaa418b1e7c64007534ec17c81d027",
+      "size": 2535
+    },
+    {
+      "path": "e3/implementation_v0_7/accounting_r2.py",
+      "git_blob_sha": "c643f76e53250fb3f064303bb82b103cfe9b39ab",
+      "size": 3470
+    },
+    {
+      "path": "e3/implementation_v0_7/attempt_registry_r2.py",
+      "git_blob_sha": "279fb611e90e85c70ae4f10ff7ea02db59595d77",
+      "size": 4401
+    },
+    {
+      "path": "e3/implementation_v0_7/attempts_r2.py",
+      "git_blob_sha": "30a5fa8de2d437db394d10e1e076c9dd9a3a45cb",
+      "size": 2028
+    },
+    {
+      "path": "e3/implementation_v0_7/execution_identity.py",
+      "git_blob_sha": "da9d9c1d854072f39f8e5d84e2f7d7c4e8d7e44a",
+      "size": 709
+    },
+    {
+      "path": "e3/implementation_v0_7/live_request_builder.py",
+      "git_blob_sha": "c88465d94179c048d66a38ef167ad3b8d4540de7",
+      "size": 789
+    },
+    {
+      "path": "e3/implementation_v0_7/live_response_adapter.py",
+      "git_blob_sha": "8e277fcbe79770e5f2b24cb47ebc189a79f42199",
+      "size": 2629
+    },
+    {
+      "path": "e3/implementation_v0_7/live_runner_r2.py",
+      "git_blob_sha": "7ee714e43e9335468862b7fac791775c08215114",
+      "size": 9826
+    },
+    {
+      "path": "e3/implementation_v0_7/manifest_loader.py",
+      "git_blob_sha": "8f6282ab396e7e09808437ae412c9ae7277689a3",
+      "size": 3989
+    },
+    {
+      "path": "e3/implementation_v0_7/manifests_v0_7r1/E3A_MANIFEST_CANDIDATE_v0.7r1.json",
+      "git_blob_sha": "3ffc1e3b61b4bce929b7104d21ec5a8265a1fced",
+      "size": 55583
+    },
+    {
+      "path": "e3/implementation_v0_7/manifests_v0_7r1/E3B_F1_MANIFEST_CANDIDATE_v0.7r1.json",
+      "git_blob_sha": "ac31c4707fbf00e68a0e321cccda9bed8afe2131",
+      "size": 25541
+    },
+    {
+      "path": "e3/implementation_v0_7/manifests_v0_7r1/E3B_F2_MANIFEST_CANDIDATE_v0.7r1.json",
+      "git_blob_sha": "b7ab9e53b4490bbe0f08e84f808874d1f6cf1c26",
+      "size": 26981
+    },
+    {
+      "path": "e3/implementation_v0_7/manifests_v0_7r1/E3B_F3_MANIFEST_CANDIDATE_v0.7r1.json",
+      "git_blob_sha": "0685cee70f760076f9687d3d3f85a185166584db",
+      "size": 29945
+    },
+    {
+      "path": "e3/implementation_v0_7/manifests_v0_7r1/E3B_F4_MANIFEST_CANDIDATE_v0.7r1.json",
+      "git_blob_sha": "13ba22304def465d4f92d0db4af78cb9539ae310",
+      "size": 28973
+    },
+    {
+      "path": "e3/implementation_v0_7/manifests_v0_7r1/MANIFEST_SHA256_v0.7r1.json",
+      "git_blob_sha": "c847223bc9d33f864a1932cb4e0c644e5d3c63c0",
+      "size": 655
+    },
+    {
+      "path": "e3/implementation_v0_7/official_runner_r2.py",
+      "git_blob_sha": "f1f47aaa7ae63a66770322f799c1727fbd5be167",
+      "size": 8603
+    },
+    {
+      "path": "e3/implementation_v0_7/oracle_independent.py",
+      "git_blob_sha": "6d19af564edc1781a3d88695b7c7f38996184311",
+      "size": 4596
+    },
+    {
+      "path": "e3/implementation_v0_7/oracle_primary.py",
+      "git_blob_sha": "9f9d06b2cab97972f3572200c520bfb898eec21d",
+      "size": 3531
+    },
+    {
+      "path": "e3/implementation_v0_7/package_integrity_r2.py",
+      "git_blob_sha": "e725e034cab9aeb459738c14f5978b2fd45bce70",
+      "size": 1729
+    },
+    {
+      "path": "e3/implementation_v0_7/parser.py",
+      "git_blob_sha": "c8030585a87615521c42a8e3459922dac1d7af70",
+      "size": 598
+    },
+    {
+      "path": "e3/implementation_v0_7/phase_analysis.py",
+      "git_blob_sha": "343d35e20fc65f66ee1b5d4c1e0e1ab12de672ed",
+      "size": 5417
+    },
+    {
+      "path": "e3/implementation_v0_7/prompt_builder.py",
+      "git_blob_sha": "d68889f95f387e2357901c0f481fafe1b60ecd55",
+      "size": 5550
+    },
+    {
+      "path": "e3/implementation_v0_7/prove_f4_history_prefix_neutrality.py",
+      "git_blob_sha": "51c22deb5699a36eae35dad7dd563eda6dcb7f07",
+      "size": 6407
+    },
+    {
+      "path": "e3/implementation_v0_7/runner_policy.py",
+      "git_blob_sha": "be57b6d4e6876e080d9452bfc994bbc7c5fe1ce0",
+      "size": 1802
+    },
+    {
+      "path": "e3/implementation_v0_7/scorer.py",
+      "git_blob_sha": "9e03ed7bd014480cc6f82c3033d15424286c2c9c",
+      "size": 3845
+    },
+    {
+      "path": "e3/implementation_v0_7/simulator.py",
+      "git_blob_sha": "fadf0bf22a6d58fa6c8ab1776017efbe05773806",
+      "size": 3391
+    },
+    {
+      "path": "e3/implementation_v0_7/test_attempt_registry_r2.py",
+      "git_blob_sha": "ec6b9e8ecbdc0fd79fc99e4437c4aa5ed842687b",
+      "size": 3422
+    },
+    {
+      "path": "e3/implementation_v0_7/test_exact_package_r2.py",
+      "git_blob_sha": "723abe085710af51257018b6ca2cf6fc00f8a14e",
+      "size": 2100
+    },
+    {
+      "path": "e3/implementation_v0_7/test_frozen_manifests_r2.py",
+      "git_blob_sha": "5f3a87f78d9b05d8492001c5184c2d5713270b24",
+      "size": 3684
+    },
+    {
+      "path": "e3/implementation_v0_7/test_live_response_adapter.py",
+      "git_blob_sha": "4a003e727d4757127776b107da1bff229dd7e851",
+      "size": 1901
+    },
+    {
+      "path": "e3/implementation_v0_7/test_live_runner_r2.py",
+      "git_blob_sha": "2b940d2c1a1e75388d1e1ceb03ed1d6183f36ca4",
+      "size": 2404
+    },
+    {
+      "path": "e3/implementation_v0_7/test_official_runner_prepare_r2.py",
+      "git_blob_sha": "cf6643a2390c4f47218a824b99f5f862706d903b",
+      "size": 2728
+    },
+    {
+      "path": "e3/implementation_v0_7/test_r2_repair.py",
+      "git_blob_sha": "dc809f8b4c6c5330f69d08d02293801cb4869a63",
+      "size": 7898
+    },
+    {
+      "path": "e3/implementation_v0_7/test_runner_policy_r2.py",
+      "git_blob_sha": "f754245993169cd21c36df42719b3caea1bcf380",
+      "size": 2321
+    }
+  ]
+}

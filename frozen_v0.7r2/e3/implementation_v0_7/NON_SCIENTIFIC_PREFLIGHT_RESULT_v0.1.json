@@ -1,0 +1,48 @@
+{
+  "fixture_id": "NON_SCIENTIFIC_PREFLIGHT_FIXTURE_v0.1",
+  "scientific_data": false,
+  "live_model_contacted": true,
+  "base_url": "http://127.0.0.1:1234/v1",
+  "expected_model": "qwen3-4b-instruct-2507",
+  "expected_runtime": "llama.cpp-win-x86_64-avx2@2.41.0",
+  "expected_context_length": 8192,
+  "requested_max_tokens": 512,
+  "requested_temperature": 0.0,
+  "requested_top_p": 1.0,
+  "requested_top_k": 1,
+  "fixture_sha256": "e5ad1325bf344fac5a702fa1ffc1fd7fcfbc458649df068833b4bae722bcca1f",
+  "started_unix_time": 1790446038.884851,
+  "status": "PASS",
+  "checks": {
+    "models_endpoint_reachable": true,
+    "expected_model_listed": true,
+    "first_response_exact_echo_tool_call": true,
+    "request_fields_accepted": true,
+    "final_text_exact": true,
+    "completion_tokens_within_requested_limit": true
+  },
+  "limitations": [
+    "OpenAI-compatible API response may not expose llama.cpp runtime version.",
+    "OpenAI-compatible API response may not expose loaded context length.",
+    "max_tokens request acceptance is verified; exact server-side enforcement is not independently proven by this fixture."
+  ],
+  "models_endpoint_ids": [
+    "qwen3-4b-instruct-2507",
+    "ministral-3-8b-instruct-2512",
+    "microsoft_phi-4-mini-reasoning",
+    "microsoft_phi-4-mini-instruct",
+    "qwen3.5-4b",
+    "qwen/qwen3-4b-thinking-2507",
+    "text-embedding-nomic-embed-text-v1.5"
+  ],
+  "final_text": "PREFLIGHT_STATUS: OK",
+  "second_response_usage": {
+    "prompt_tokens": 228,
+    "completion_tokens": 7,
+    "total_tokens": 235,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "ended_unix_time": 1790446044.4172552
+}

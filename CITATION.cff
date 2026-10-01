@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, please cite it using the metadata below."
+title: "Verification-Status Overclaiming (VSO): Reproducible Experimental Artifact"
+type: software
+authors:
+  - family-names: Boticiu
+    given-names: Ovidiu
+version: 1.0.0
+date-released: 2026-09-30
+license: MIT
+keywords:
+  - llm evaluation
+  - agent evaluation
+  - failure analysis
+  - evidence sufficiency
+  - reproducible research
+abstract: >-
+  A closed, prospectively constrained evaluation of evidence-status overclaiming
+  in a tool-using local language-model setting. The final E3-A run observed
+  18/24 operational STATUS_OVERCLAIM events in forced-ambiguity cases, while
+  no family passed the preregistered 6/6 matched-control competence gate.
