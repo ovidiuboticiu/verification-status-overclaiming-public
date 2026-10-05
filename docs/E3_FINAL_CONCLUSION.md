@@ -6,6 +6,8 @@
 
 > **Post-closure interpretive clarification — 2026-10-05:** a descriptive aggregation of the already-published 48 rows shows that the model returned `EVIDENCE_STATUS: SUFFICIENT` in 42/48 final responses (18/24 forced; 24/24 controls). This does not alter any frozen score, gate, or stopping decision, but it is an important guardrail against reading the 18/24 forced count as condition-specific sensitivity. See `E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md`.
 
+> **F3 semantic sensitivity — 2026-10-05:** the frozen F3 oracle required a metadata-discovery call even after the agent had successfully resolved the valid authority token. Under the stated interface contract, a diagnostic rescoring gives F3 control complete success **4/6** rather than frozen **0/6**, and total control success **8/24** rather than frozen **4/24**. F3 still fails the 6/6 competence gate, so the frozen 18/24 forced result and stopping decision are unchanged. See `F3_SEMANTIC_SENSITIVITY_2026-10-05.md`.
+
 ## 1. Final empirical result
 
 The prospectively frozen E3-A run completed as a valid official attempt with all 48 frozen episodes.
