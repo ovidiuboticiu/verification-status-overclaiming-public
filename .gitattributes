@@ -5,3 +5,7 @@
 *.py text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+
+# Preserve exact CRLF bytes for official JSON artifacts mirrored from the frozen ZIP.
+results/official/E3A_PHASE_ANALYSIS.json -text
+results/official/RUN_RECORD.json -text
