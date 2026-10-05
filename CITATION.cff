@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Boticiu
     given-names: Ovidiu
-version: 1.0.0
-date-released: 2026-09-30
+version: 1.0.1
+date-released: 2026-10-05
 license: MIT
 keywords:
   - llm evaluation
@@ -17,5 +17,6 @@ keywords:
 abstract: >-
   A closed, prospectively constrained evaluation of evidence-status overclaiming
   in a tool-using local language-model setting. The final E3-A run observed
-  18/24 operational STATUS_OVERCLAIM events in forced-ambiguity cases, while
-  no family passed the preregistered 6/6 matched-control competence gate.
+  18/24 operational STATUS_OVERCLAIM events in forced-ambiguity cases; the model
+  returned EVIDENCE_STATUS: SUFFICIENT in 42/48 responses overall, and no family
+  passed the preregistered 6/6 matched-control competence gate.
