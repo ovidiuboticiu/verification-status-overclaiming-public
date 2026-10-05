@@ -28,7 +28,7 @@ This SHA is an archival provenance anchor only; the underlying private repositor
 - SHA-256: `13f5baf79a895f7e720382a378c0ec021d4d5958984c3366d99af0aab73d81a1`
 - Official attempt: `E3A-OFFICIAL-ATTEMPT-001`
 
-The browseable copies under `frozen_v0.7r2/` and `results/official/` are byte-for-byte extracted members of these immutable ZIPs and are checked by CI.
+The browseable copies under `frozen_v0.7r2/` and `results/official/` are byte-for-byte extracted members of these immutable ZIPs. They can be checked with `python tools/validate_release.py`; the repository also preserves a reusable workflow example at `ci/validate-release.yml`, but that file is not installed as an active GitHub Actions workflow.
 
 ## Post-release correction record
 
@@ -37,3 +37,10 @@ The original v1.0.0 snapshot remains historically identifiable. Public-wrapper c
 ### v1.0.2 audit remediation
 
 The v1.0.2 correction release restores the exact CRLF bytes of the two browseable official JSON mirrors, adds a diagnostic F3 semantic sensitivity analysis, and refreshes current-release integrity metadata. The frozen E3 package, official output ZIP, historical frozen scores, and stopping decision are not rewritten.
+
+
+### v1.0.3 final-audit remediation
+
+The v1.0.3 documentation adds the F2 decisive-evidence sensitivity analysis. Under the stated F2 semantics, terminal `P3` plus the exact pre-operation value is already decisive, although the frozen acquisition checklist additionally required the operation-record call. Diagnostic F2 control success is **4/6** rather than frozen **0/6**.
+
+Together with the separately documented F3 semantic sensitivity, the diagnostic all-family control total is **12/24** rather than frozen **4/24**. No family reaches **6/6**, so the frozen stopping decision remains unchanged.
