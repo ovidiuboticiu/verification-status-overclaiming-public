@@ -52,3 +52,26 @@ The frozen scorer and official result files are preserved rather than silently r
 ## 5. Release-integrity refresh
 
 For v1.0.2, `RELEASE_MANIFEST.json` and `SHA256SUMS.txt` are regenerated after all remediation changes. The release validator checks the checksum list against the working tree in addition to the immutable frozen ZIP identities.
+
+
+## 6. F2 decisive-evidence checklist sensitivity
+
+A final adversarial audit found that the frozen F2 acquisition checklist was stricter than the stated F2 semantics for the observed control traces.
+
+All six F2 matched controls observed terminal phase `P3` and read the exact pre-operation value. Under the frozen F2 contract, `P3` means the operation failed and current state therefore equals the pre-operation value. Those observations already determine current state without needing `read_operation_record()`.
+
+The frozen `required_decisive_observation_set` nevertheless required the operation-record call as well. Consequently all six F2 controls received `decisive_evidence_acquired=false`.
+
+Diagnostic interpretation of the published traces gives:
+
+- frozen F2 complete success: **0/6**;
+- diagnostic F2 complete semantic success: **4/6**;
+- two remaining F2 controls still have incorrect final claims.
+
+Combined with the previously documented F3 sensitivity, the all-family diagnostic control total becomes **12/24** rather than frozen **4/24**. Neither F2 nor F3 reaches the required **6/6** family gate, so no family qualifies for E3-B and the stopping decision remains unchanged.
+
+See `F2_DECISIVE_EVIDENCE_SENSITIVITY_2026-10-05.md` and `../tools/diagnose_f2_semantics.py`.
+
+## 7. v1.0.3 integrity refresh
+
+For v1.0.3, release metadata are refreshed after the F2 sensitivity documentation. The frozen package, official output ZIP, raw traces, frozen scores, and historical stopping decision remain unchanged.

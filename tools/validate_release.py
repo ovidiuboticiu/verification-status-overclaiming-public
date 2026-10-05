@@ -262,11 +262,13 @@ def main() -> int:
     validate_release_integrity_metadata(errors)
     required = [
         "README.md", "LICENSE", "CITATION.cff", "PROVENANCE.md", "REPRODUCE.md", "AI_USE.md", "VERSION",
-        "RELEASE_MANIFEST.json", "SHA256SUMS.txt", "RELEASE_NOTES_v1.0.2.md",
+        "RELEASE_MANIFEST.json", "SHA256SUMS.txt", "RELEASE_NOTES_v1.0.2.md", "RELEASE_NOTES_v1.0.3.md",
         "docs/E3_FINAL_CONCLUSION.md", "docs/E3A_POST_RUN_AUDIT.md",
         "docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md",
+        "docs/F2_DECISIVE_EVIDENCE_SENSITIVITY_2026-10-05.md",
         "docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md",
         "docs/POST_RELEASE_CORRECTIONS_2026-10-05.md",
+        "tools/diagnose_f2_semantics.py",
         "tools/diagnose_f3_semantics.py",
     ]
     for rel in required:
