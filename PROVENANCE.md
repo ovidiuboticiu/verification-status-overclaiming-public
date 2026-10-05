@@ -29,3 +29,7 @@ This SHA is an archival provenance anchor only; the underlying private repositor
 - Official attempt: `E3A-OFFICIAL-ATTEMPT-001`
 
 The browseable copies under `frozen_v0.7r2/` and `results/official/` are byte-for-byte extracted members of these immutable ZIPs and are checked by CI.
+
+## Post-release correction record
+
+The original v1.0.0 snapshot remains historically identifiable. Public-wrapper corrections made on 2026-10-05 are documented in `docs/POST_RELEASE_CORRECTIONS_2026-10-05.md`; they do not alter the frozen E3 package, official output ZIP, or experimental stopping decision.
