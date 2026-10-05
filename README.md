@@ -3,9 +3,11 @@
 **A reproducible experiment on a specific agent failure: declaring that the available evidence is sufficient when the experiment's oracle says it is not.**
 
 **Status:** closed experimental sequence  
-**Release:** 1.0.0  
+**Release:** 1.0.1  
 **Closure date:** 2026-09-30  
 **Novelty claim:** none
+
+**Correction release:** v1.0.1 incorporates the 2026-10-05 public-wrapper fixes and interpretive clarification; frozen experimental artifacts and official outputs are unchanged.
 
 ## In one minute
 
