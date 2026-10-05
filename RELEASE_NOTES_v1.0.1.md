@@ -1,5 +1,7 @@
 # VSO v1.0.1 — correction release
 
+> **Superseded note (2026-10-05):** the v1.0.1 line-ending remediation was incomplete. Marking the two official JSON paths `-text` prevented future normalization but did not restore CRLF bytes already committed as LF. v1.0.2 completes that byte-level repair and refreshes the integrity metadata. The v1.0.1 tag remains unchanged as a historical record.
+
 **Date:** 2026-10-05
 
 This patch release corrects the public repository wrapper and makes an important descriptive interpretation guardrail explicit. It does **not** alter the frozen E3 package, official model outputs, per-episode scores, selection rule, or stopping decision.
