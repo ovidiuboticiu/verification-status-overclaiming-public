@@ -192,9 +192,11 @@ def main() -> int:
     validate_json(errors)
     validate_privacy(errors)
     required = [
-        "README.md", "LICENSE", "CITATION.cff", "PROVENANCE.md", "REPRODUCE.md", "AI_USE.md",
+        "README.md", "LICENSE", "CITATION.cff", "PROVENANCE.md", "REPRODUCE.md", "AI_USE.md", "VERSION",
+        "RELEASE_NOTES_v1.0.1.md",
         "docs/E3_FINAL_CONCLUSION.md", "docs/E3A_POST_RUN_AUDIT.md",
         "docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md",
+        "docs/POST_RELEASE_CORRECTIONS_2026-10-05.md",
     ]
     for rel in required:
         if not (ROOT / rel).exists():
