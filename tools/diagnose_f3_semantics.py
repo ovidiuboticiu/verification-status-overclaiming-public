@@ -50,6 +50,8 @@ def main() -> int:
     records = load_records()
     controls = [r for r in records if r.get("case_role") == "control"]
     f3_controls = [r for r in controls if r.get("family") == "F3"]
+    assert len(controls) == 24, len(controls)
+    assert len(f3_controls) == 6, len(f3_controls)
 
     rows = []
     semantic_success = 0
@@ -88,6 +90,9 @@ def main() -> int:
         if r.get("family") != "F3"
     )
     diagnostic_total = frozen_non_f3 + semantic_success
+
+    assert semantic_success == 4, semantic_success
+    assert diagnostic_total == 8, diagnostic_total
 
     report = {
         "status": "DIAGNOSTIC_ONLY",
