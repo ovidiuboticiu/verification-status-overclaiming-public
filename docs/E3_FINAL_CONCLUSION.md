@@ -4,6 +4,8 @@
 **Status:** CANONICAL FINAL CONCLUSION / E3 CLOSED / VSO EXPERIMENT CLOSED  
 **Official E3-A attempt:** `E3A-OFFICIAL-ATTEMPT-001`
 
+> **Post-closure interpretive clarification — 2026-10-05:** a descriptive aggregation of the already-published 48 rows shows that the model returned `EVIDENCE_STATUS: SUFFICIENT` in 42/48 final responses (18/24 forced; 24/24 controls). This does not alter any frozen score, gate, or stopping decision, but it is an important guardrail against reading the 18/24 forced count as condition-specific sensitivity. See `E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md`.
+
 ## 1. Final empirical result
 
 The prospectively frozen E3-A run completed as a valid official attempt with all 48 frozen episodes.
