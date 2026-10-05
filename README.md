@@ -15,6 +15,8 @@
 
 **Main result.** The operational event `STATUS_OVERCLAIM` occurred in **18/24 forced opportunities**. However, no tested family passed the prospectively frozen matched-control competence gate.
 
+**Important interpretive guardrail.** Across all 48 final responses, the model returned `EVIDENCE_STATUS: SUFFICIENT` in **42/48** cases: **18/24 forced** cases and **24/24 controls**. Because this response tendency was not specific to forced ambiguity, the 18/24 forced count must not be interpreted as evidence of a condition-specific mechanism. The failed matched-control competence gate is therefore central to the conclusion.
+
 **Conclusion.** The experiment shows that verification-status overclaiming can be elicited in this exact frozen environment, but it does **not** support a family-level mechanism, population prevalence, cross-model generalization, or real-world prevalence claim.
 
 **Reproducibility.** Raw traces, frozen scoring logic, final scores, hashes, and recomputation tools are included. The final E3-A scoring can be checked without contacting a model.
@@ -79,6 +81,8 @@ Because every family failed the matched-control competence gate, no family-level
 - `results/official/` — byte-for-byte browseable extraction of the official output.
 - `docs/E3A_POST_RUN_AUDIT.md` — post-run audit.
 - `docs/E3_FINAL_CONCLUSION.md` — final documented interpretation and closure.
+- `docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md` — post-closure descriptive clarification of the broad `SUFFICIENT` response tendency (42/48 overall; no new data).
+- `AI_USE.md` — AI-assistance disclosure and human-responsibility statement.
 - `docs/PREFREEZE_VERIFICATION.md` — frozen-package provenance and offline verification.
 - `docs/PRIOR_ART_STATUS.md` — prior-art status and novelty boundary.
 - `REPRODUCE.md` — artifact verification, rescoring, and rerun instructions.
