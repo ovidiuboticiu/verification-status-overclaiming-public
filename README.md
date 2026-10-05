@@ -82,6 +82,7 @@ Because every family failed the matched-control competence gate, no family-level
 - `docs/E3A_POST_RUN_AUDIT.md` — post-run audit.
 - `docs/E3_FINAL_CONCLUSION.md` — final documented interpretation and closure.
 - `docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md` — post-closure descriptive clarification of the broad `SUFFICIENT` response tendency (42/48 overall; no new data).
+- `docs/POST_RELEASE_CORRECTIONS_2026-10-05.md` — correction record for the checkout line-ending validation defect and interpretive clarification.
 - `AI_USE.md` — AI-assistance disclosure and human-responsibility statement.
 - `docs/PREFREEZE_VERIFICATION.md` — frozen-package provenance and offline verification.
 - `docs/PRIOR_ART_STATUS.md` — prior-art status and novelty boundary.
