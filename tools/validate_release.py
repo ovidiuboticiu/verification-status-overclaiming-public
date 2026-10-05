@@ -14,7 +14,7 @@ EXPECTED_HASHES = {
     "artifacts/actions/E3_EXACT_PACKAGE_BUILD_REPORT_v0.7r2.json": "9be28fe32b00903d652c4c52b6366c3364cfc0b815d02bd94004668f65b7cdac",
     "artifacts/actions/E3_EXACT_ARCHIVE_ISOLATION_REPORT_v0.7r2.json": "ffef79af0b263b8649b80771b5b174fffbc0c8a5363c68c7e94f3251e2111a09",
     "docs/E3A_POST_RUN_AUDIT.md": "240e39d8d217fed1a23f73ac7d158069c0ef2d13fdf01c342a33d09e265ce098",
-    "docs/E3_FINAL_CONCLUSION.md": "63834892ba593912bed297295b5370e39fc6021ae31b601c5fec2b2477751f43",
+    "docs/E3_FINAL_CONCLUSION.md": "e23716616fad20898056df89230000b56c850cc8b99e8fcce67fd5c759538754",
 }
 
 EXPECTED_OUTPUT_MEMBERS = {
@@ -192,8 +192,9 @@ def main() -> int:
     validate_json(errors)
     validate_privacy(errors)
     required = [
-        "README.md", "LICENSE", "CITATION.cff", "PROVENANCE.md", "REPRODUCE.md",
+        "README.md", "LICENSE", "CITATION.cff", "PROVENANCE.md", "REPRODUCE.md", "AI_USE.md",
         "docs/E3_FINAL_CONCLUSION.md", "docs/E3A_POST_RUN_AUDIT.md",
+        "docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md",
     ]
     for rel in required:
         if not (ROOT / rel).exists():
