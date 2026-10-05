@@ -3,11 +3,11 @@
 **A reproducible experiment on a specific agent failure: declaring that the available evidence is sufficient when the experiment's oracle says it is not.**
 
 **Status:** closed experimental sequence  
-**Release:** 1.0.2  
+**Release:** 1.0.3  
 **Closure date:** 2026-09-30  
 **Novelty claim:** none
 
-**Correction release:** v1.0.2 completes the 2026-10-05 audit remediation: it restores exact official-output bytes, refreshes release integrity metadata, and adds the F3 semantic sensitivity analysis. Frozen experimental scores and official model outputs are preserved as historical records.
+**Correction release:** v1.0.3 adds a post-closure F2 decisive-evidence sensitivity analysis on top of the v1.0.2 byte-integrity and F3 remediation. Frozen experimental scores and official model outputs remain preserved as historical records.
 
 ## In one minute
 
@@ -18,6 +18,8 @@
 **Main result.** The operational event `STATUS_OVERCLAIM` occurred in **18/24 forced opportunities**. However, no tested family passed the prospectively frozen matched-control competence gate.
 
 **Important interpretive guardrail.** Across all 48 final responses, the model returned `EVIDENCE_STATUS: SUFFICIENT` in **42/48** cases: **18/24 forced** cases and **24/24 controls**. Because this response tendency was not specific to forced ambiguity, the 18/24 forced count must not be interpreted as evidence of a condition-specific mechanism. The failed matched-control competence gate is therefore central to the conclusion.
+
+**Control-gate sensitivity guardrail.** Later audit found two places where the frozen acquisition/scoring implementation was stricter than the stated task semantics. Diagnostic rescoring gives F2 controls **4/6** instead of frozen **0/6** and F3 controls **4/6** instead of frozen **0/6**. Replacing both frozen counts yields **12/24** diagnostic complete-control successes rather than frozen **4/24**, but no family reaches the required **6/6** gate. The historical stopping decision is unchanged.
 
 **Conclusion.** The experiment shows that verification-status overclaiming can be elicited in this exact frozen environment, but it does **not** support a family-level mechanism, population prevalence, cross-model generalization, or real-world prevalence claim.
 
@@ -84,8 +86,9 @@ Because every family failed the matched-control competence gate, no family-level
 - `docs/E3A_POST_RUN_AUDIT.md` — post-run audit.
 - `docs/E3_FINAL_CONCLUSION.md` — final documented interpretation and closure.
 - `docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md` — post-closure descriptive clarification of the broad `SUFFICIENT` response tendency (42/48 overall; no new data).
+- `docs/F2_DECISIVE_EVIDENCE_SENSITIVITY_2026-10-05.md` — post-closure audit of the F2 decisive-evidence checklist and diagnostic rescoring.
 - `docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md` — post-closure audit of the F3 oracle/interface mismatch and diagnostic rescoring.
-- `tools/diagnose_f3_semantics.py` — recomputes that F3 diagnostic directly from the published traces.
+- `tools/diagnose_f2_semantics.py` and `tools/diagnose_f3_semantics.py` — recompute the two semantic diagnostics directly from the published traces.
 - `docs/POST_RELEASE_CORRECTIONS_2026-10-05.md` — correction record for the checkout line-ending validation defect and interpretive clarification.
 - `AI_USE.md` — AI-assistance disclosure and human-responsibility statement.
 - `docs/PREFREEZE_VERIFICATION.md` — frozen-package provenance and offline verification.
@@ -124,6 +127,8 @@ Official E3-A output bundle SHA-256:
 ```bash
 python tools/validate_release.py
 python tools/recalculate_e3a.py
+python tools/diagnose_f2_semantics.py
+python tools/diagnose_f3_semantics.py
 ```
 
 The release is designed so that the final E3-A scoring can be checked without contacting a model.
