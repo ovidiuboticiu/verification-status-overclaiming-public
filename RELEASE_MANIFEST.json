@@ -1,6 +1,6 @@
 {
-  "release": "1.0.2",
-  "status": "AUDIT_REMEDIATED_PUBLIC_RELEASE",
+  "release": "1.0.3",
+  "status": "FINAL_AUDIT_REMEDIATED_PUBLIC_RELEASE",
   "frozen_package_sha256": "efaf2efbfbbc47b242c81c4493824b3fde8a5aaf95009c2d7b08df472d7e55c8",
   "payload_set_sha256": "92ab2a44e16a5347f6c803f4f8f66ca7240b95cbf730ea2ee795984db8e5c39d",
   "e3a_manifest_sha256": "83c33aade50bca0c55482cd6ddd6711efd82f86674feb19b4cd77259679ab6a4",
@@ -53,8 +53,8 @@
     },
     {
       "path": "docs/E3_FINAL_CONCLUSION.md",
-      "bytes": 5338,
-      "sha256": "460b308e126fdc8387ed06e52455b478aa3c59fd3de34d33fdc5100d93160791"
+      "bytes": 5993,
+      "sha256": "05c17efb272e9c0fefa923f1bdec6d7be2fcb3aaf2806d4054a2b7ee9cc90808"
     },
     {
       "path": "docs/E3A_POST_RUN_AUDIT.md",
@@ -67,14 +67,19 @@
       "sha256": "b116a8e305a1343e7434576a20a954dfe0c30420ee6e38d1e7681f16db397169"
     },
     {
+      "path": "docs/F2_DECISIVE_EVIDENCE_SENSITIVITY_2026-10-05.md",
+      "bytes": 2900,
+      "sha256": "146bd199d4bd26eb76d7c166f3b2c65118740272c028c3cb38cdaea007023af0"
+    },
+    {
       "path": "docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md",
       "bytes": 2806,
       "sha256": "632aec5344ac1b398fe8f747dcfc0089c38f7d5fc2b2de70ac9d49ff4ed48e0d"
     },
     {
       "path": "docs/POST_RELEASE_CORRECTIONS_2026-10-05.md",
-      "bytes": 3608,
-      "sha256": "cb8c9120de8fa19432e4be34758763dc5273ea6de35366f41e1347f29adcf0c3"
+      "bytes": 5129,
+      "sha256": "208d1af846d01b46997fe3b5ddfcc8660148bfb5be1244f6790a0a89ff21faca"
     },
     {
       "path": "docs/PREFREEZE_VERIFICATION.md",
@@ -338,8 +343,8 @@
     },
     {
       "path": "PROVENANCE.md",
-      "bytes": 2105,
-      "sha256": "85b36e2640869e27c4ad9be2017e3ea2662745726ce88fa4025faa49a81de7a6"
+      "bytes": 2903,
+      "sha256": "a0a32dc1879bb35e5b4dc429a5b538db33bb6ee9956eb3cd6e4a87809f5a3ae8"
     },
     {
       "path": "PUBLIC_RELEASE_AUDIT.md",
@@ -353,8 +358,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6329,
-      "sha256": "adf679c4f49d097e7606dc0f45ddba68a9f16ed07c367ad19dea60d7cb473b14"
+      "bytes": 7045,
+      "sha256": "f5f87bdfc1a13b11418c6f62382d2d3ed593e6dcf0d7a001072d5633fc5cc0f6"
     },
     {
       "path": "RELEASE_NOTES_v1.0.1.md",
@@ -367,9 +372,14 @@
       "sha256": "3420be2185771cab8ff50ad0fc14fd507515c6ed6cdb33cb32b8d1a48d19c382"
     },
     {
+      "path": "RELEASE_NOTES_v1.0.3.md",
+      "bytes": 1775,
+      "sha256": "0185f7ffa5395efb00e08592a6dd6d2d6186ac609b835fff880bcce8e2478f21"
+    },
+    {
       "path": "REPRODUCE.md",
-      "bytes": 2890,
-      "sha256": "a63c3d0ff53dea99cc47c8a74bea6ed9e36e274589b6d43ab6227f9ff39c479d"
+      "bytes": 3619,
+      "sha256": "fae6bbc75350a78bf057a216ed67aaf0318e50ba724b7636e6c92d6568757356"
     },
     {
       "path": "results/official/attempts/E3A-OFFICIAL-ATTEMPT-001/ATTEMPT_RUN_RECORD.json",
@@ -402,6 +412,11 @@
       "sha256": "c09dfe9d81be2f1fff8006645e022b73b1dcf47cb10108709dad258b4bbe5089"
     },
     {
+      "path": "tools/diagnose_f2_semantics.py",
+      "bytes": 1241,
+      "sha256": "01b1eaec6981a644d863d8e87195030cce8e120510c504e20f0d785be46914ca"
+    },
+    {
       "path": "tools/diagnose_f3_semantics.py",
       "bytes": 3964,
       "sha256": "2d9f2e321154320c1da98a848a4e28ca8b16443fda698868b0bbc9b3d72b59c5"
@@ -419,7 +434,7 @@
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "9fd28642d3aca191e5c7fc2383cfd6fabb2aac8743f029dabb8989ac584e31bc"
+      "sha256": "f5e5c9534532840fcd45bb002e69ed85c61dba2753450e26b448b7df1481e24d"
     }
   ]
 }
