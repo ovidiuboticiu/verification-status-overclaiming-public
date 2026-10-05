@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Boticiu
     given-names: Ovidiu
-version: 1.0.2
+version: 1.0.3
 date-released: 2026-10-05
 license: MIT
 keywords:
@@ -18,6 +18,7 @@ abstract: >-
   A closed, prospectively constrained evaluation of evidence-status overclaiming
   in a tool-using local language-model setting. The final E3-A run observed
   18/24 operational STATUS_OVERCLAIM events in forced-ambiguity cases; the model
-  returned EVIDENCE_STATUS: SUFFICIENT in 42/48 responses overall. A post-closure
-  F3 semantic sensitivity analysis changes F3 control success from frozen 0/6 to
-  diagnostic 4/6, still below the preregistered 6/6 competence gate.
+  returned EVIDENCE_STATUS: SUFFICIENT in 42/48 responses overall. Post-closure
+  semantic sensitivity analyses give F2 control success 4/6 instead of frozen
+  0/6 and F3 control success 4/6 instead of frozen 0/6; neither family reaches
+  the frozen 6/6 competence gate.
