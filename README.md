@@ -3,11 +3,11 @@
 **A reproducible experiment on a specific agent failure: declaring that the available evidence is sufficient when the experiment's oracle says it is not.**
 
 **Status:** closed experimental sequence  
-**Release:** 1.0.1  
+**Release:** 1.0.2  
 **Closure date:** 2026-09-30  
 **Novelty claim:** none
 
-**Correction release:** v1.0.1 incorporates the 2026-10-05 public-wrapper fixes and interpretive clarification; frozen experimental artifacts and official outputs are unchanged.
+**Correction release:** v1.0.2 completes the 2026-10-05 audit remediation: it restores exact official-output bytes, refreshes release integrity metadata, and adds the F3 semantic sensitivity analysis. Frozen experimental scores and official model outputs are preserved as historical records.
 
 ## In one minute
 
@@ -84,6 +84,8 @@ Because every family failed the matched-control competence gate, no family-level
 - `docs/E3A_POST_RUN_AUDIT.md` — post-run audit.
 - `docs/E3_FINAL_CONCLUSION.md` — final documented interpretation and closure.
 - `docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md` — post-closure descriptive clarification of the broad `SUFFICIENT` response tendency (42/48 overall; no new data).
+- `docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md` — post-closure audit of the F3 oracle/interface mismatch and diagnostic rescoring.
+- `tools/diagnose_f3_semantics.py` — recomputes that F3 diagnostic directly from the published traces.
 - `docs/POST_RELEASE_CORRECTIONS_2026-10-05.md` — correction record for the checkout line-ending validation defect and interpretive clarification.
 - `AI_USE.md` — AI-assistance disclosure and human-responsibility statement.
 - `docs/PREFREEZE_VERIFICATION.md` — frozen-package provenance and offline verification.
