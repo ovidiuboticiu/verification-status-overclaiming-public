@@ -43,8 +43,8 @@
     },
     {
       "path": "ci/validate-release.yml",
-      "bytes": 3619,
-      "sha256": "a7e085b0856ca84f3862f9652b1bd92516903522decdf3c1fcc174c7b4c00001"
+      "bytes": 3724,
+      "sha256": "b80e8677b9fa326716ac29f557ea5e8e1b1744b69a21c6c5b7dbc86a79b0ba66"
     },
     {
       "path": "CITATION.cff",
@@ -358,8 +358,8 @@
     },
     {
       "path": "RELEASE_NOTES_v1.0.1.md",
-      "bytes": 1154,
-      "sha256": "41260d61b22659687eaeb51eb320685f2d7a9a131ee97b8d5ba108d472455db1"
+      "bytes": 1508,
+      "sha256": "e02f71f1f6054324d2e69463e9bac7092b2eb577788bd6dccd01d2ca0ff798f3"
     },
     {
       "path": "RELEASE_NOTES_v1.0.2.md",
@@ -368,8 +368,8 @@
     },
     {
       "path": "REPRODUCE.md",
-      "bytes": 2171,
-      "sha256": "8ecbe4ad342f10ed9d28f038c2382d4a261e3ba5aa504b20d5647ebfc58e8643"
+      "bytes": 2890,
+      "sha256": "a63c3d0ff53dea99cc47c8a74bea6ed9e36e274589b6d43ab6227f9ff39c479d"
     },
     {
       "path": "results/official/attempts/E3A-OFFICIAL-ATTEMPT-001/ATTEMPT_RUN_RECORD.json",
@@ -403,8 +403,8 @@
     },
     {
       "path": "tools/diagnose_f3_semantics.py",
-      "bytes": 3764,
-      "sha256": "d4b1809f1c433d248be7c76954a9e51c0709456c8f4e5328a867626f6d32502b"
+      "bytes": 3964,
+      "sha256": "2d9f2e321154320c1da98a848a4e28ca8b16443fda698868b0bbc9b3d72b59c5"
     },
     {
       "path": "tools/recalculate_e3a.py",
