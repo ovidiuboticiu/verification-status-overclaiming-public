@@ -33,3 +33,7 @@ The browseable copies under `frozen_v0.7r2/` and `results/official/` are byte-fo
 ## Post-release correction record
 
 The original v1.0.0 snapshot remains historically identifiable. Public-wrapper corrections made on 2026-10-05 are documented in `docs/POST_RELEASE_CORRECTIONS_2026-10-05.md`; they do not alter the frozen E3 package, official output ZIP, or experimental stopping decision.
+
+### v1.0.2 audit remediation
+
+The v1.0.2 correction release restores the exact CRLF bytes of the two browseable official JSON mirrors, adds a diagnostic F3 semantic sensitivity analysis, and refreshes current-release integrity metadata. The frozen E3 package, official output ZIP, historical frozen scores, and stopping decision are not rewritten.
