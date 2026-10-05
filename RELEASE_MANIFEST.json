@@ -428,8 +428,8 @@
     },
     {
       "path": "tools/validate_release.py",
-      "bytes": 12692,
-      "sha256": "3c7842cfe87d9991a36f55c6083dd48c62277d9f3a536e88f12eefacea3c1da3"
+      "bytes": 12824,
+      "sha256": "f98074a7385d094adabe1a0b1f5307f8ffbe2cdb067015c18e9864f7928e8e55"
     },
     {
       "path": "VERSION",
