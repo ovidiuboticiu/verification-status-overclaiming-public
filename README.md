@@ -1,13 +1,25 @@
 # Verification-Status Overclaiming (VSO)
 
+**A reproducible experiment on a specific agent failure: declaring that the available evidence is sufficient when the experiment's oracle says it is not.**
+
 **Status:** closed experimental sequence  
 **Release:** 1.0.0  
 **Closure date:** 2026-09-30  
 **Novelty claim:** none
 
-This repository is a reproducible research artifact for testing a narrow failure mode in a tool-using language-model setting: whether an agent declares that its evidence is sufficient when the experiment's frozen oracle says the observed evidence is insufficient.
+## In one minute
 
-The public repository is intentionally a **clean release snapshot** rather than a copy of the private development Git history. Exact scientific artifacts are preserved by cryptographic hashes.
+**Question.** When evidence is incomplete or ambiguous, can a tool-using language-model agent nevertheless declare that it has enough evidence to decide?
+
+**Method.** The final frozen E3-A experiment used 48 episodes: 24 forced-ambiguity cases and 24 matched controls. A frozen oracle defined whether the observed evidence was sufficient, and the agent's answer was scored against that status.
+
+**Main result.** The operational event `STATUS_OVERCLAIM` occurred in **18/24 forced opportunities**. However, no tested family passed the prospectively frozen matched-control competence gate.
+
+**Conclusion.** The experiment shows that verification-status overclaiming can be elicited in this exact frozen environment, but it does **not** support a family-level mechanism, population prevalence, cross-model generalization, or real-world prevalence claim.
+
+**Reproducibility.** Raw traces, frozen scoring logic, final scores, hashes, and recomputation tools are included. The final E3-A scoring can be checked without contacting a model.
+
+The public repository is a **clean release snapshot** rather than a copy of the private development Git history. Exact scientific artifacts are preserved by cryptographic hashes.
 
 ## Operational event
 
