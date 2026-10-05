@@ -16,7 +16,7 @@ From the repository root:
 python tools/validate_release.py
 ```
 
-This checks the critical SHA-256 identities, verifies that browseable files match the exact ZIP members, validates JSON/JSONL syntax, and scans the release for common credential patterns.
+This checks the critical immutable SHA-256 identities, verifies that browseable files match the exact ZIP members, validates the current `RELEASE_MANIFEST.json` and complete `SHA256SUMS.txt` list against the working tree, validates JSON/JSONL syntax, and scans the release for common credential patterns.
 
 ## 2. Recompute E3-A from raw traces
 
@@ -36,7 +36,24 @@ Expected final values include:
 - selected family: null
 - E3-B required: false
 
-## 3. Rerun the model experiment
+## 3. Run the F3 semantic sensitivity diagnostic
+
+```bash
+python tools/diagnose_f3_semantics.py
+```
+
+This does not alter the frozen scoring record. It follows the stated F3 interface contract and the successful `resolve_authority_token` observations in the stored traces. Expected diagnostic values are:
+
+- F3 controls: 6
+- frozen F3 complete success: 0/6
+- diagnostic F3 complete success: 4/6
+- frozen all-family control complete success: 4/24
+- diagnostic all-family control complete success: 8/24
+- F3 diagnostic competence gate: fail (4/6 < 6/6)
+
+See `docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md`.
+
+## 4. Rerun the model experiment
 
 The exact frozen source and official runner are preserved in:
 
