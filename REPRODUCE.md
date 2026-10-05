@@ -53,7 +53,25 @@ This does not alter the frozen scoring record. It follows the stated F3 interfac
 
 See `docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md`.
 
-## 4. Rerun the model experiment
+## 4. Run the F2 decisive-evidence sensitivity diagnostic
+
+```bash
+python tools/diagnose_f2_semantics.py
+```
+
+This also leaves the frozen scoring record untouched. It applies the stated F2 contract to the already-published traces. In the six F2 matched controls, terminal phase `P3` plus the exact pre-operation value already determines current state even though the frozen acquisition checklist additionally required `read_operation_record()`.
+
+Expected values include:
+
+- F2 controls: 6
+- frozen F2 complete success: 0/6
+- diagnostic F2 complete success: 4/6
+- F2 diagnostic competence gate: fail (4/6 < 6/6)
+- combined F2 + documented F3 semantic diagnostic: 12/24
+
+See `docs/F2_DECISIVE_EVIDENCE_SENSITIVITY_2026-10-05.md`.
+
+## 5. Rerun the model experiment
 
 The exact frozen source and official runner are preserved in:
 
