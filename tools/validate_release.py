@@ -13,8 +13,6 @@ EXPECTED_HASHES = {
     "artifacts/E3_OFFICIAL_OUTPUT.zip": "13f5baf79a895f7e720382a378c0ec021d4d5958984c3366d99af0aab73d81a1",
     "artifacts/actions/E3_EXACT_PACKAGE_BUILD_REPORT_v0.7r2.json": "9be28fe32b00903d652c4c52b6366c3364cfc0b815d02bd94004668f65b7cdac",
     "artifacts/actions/E3_EXACT_ARCHIVE_ISOLATION_REPORT_v0.7r2.json": "ffef79af0b263b8649b80771b5b174fffbc0c8a5363c68c7e94f3251e2111a09",
-    "docs/E3A_POST_RUN_AUDIT.md": "240e39d8d217fed1a23f73ac7d158069c0ef2d13fdf01c342a33d09e265ce098",
-    "docs/E3_FINAL_CONCLUSION.md": "e23716616fad20898056df89230000b56c850cc8b99e8fcce67fd5c759538754",
 }
 
 EXPECTED_OUTPUT_MEMBERS = {
@@ -184,6 +182,76 @@ def validate_privacy(errors: list[str]) -> None:
                     continue
                 scan_text(errors, f"{zip_rel}!{name}", text)
 
+def validate_release_integrity_metadata(errors: list[str]) -> None:
+    manifest_path = ROOT / "RELEASE_MANIFEST.json"
+    sums_path = ROOT / "SHA256SUMS.txt"
+
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        fail(errors, f"invalid RELEASE_MANIFEST.json: {exc}")
+        return
+
+    manifest_entries = manifest.get("files")
+    if not isinstance(manifest_entries, list):
+        fail(errors, "RELEASE_MANIFEST.json files must be a list")
+        return
+
+    manifest_paths = set()
+    for entry in manifest_entries:
+        rel = entry.get("path")
+        expected_hash = entry.get("sha256")
+        expected_bytes = entry.get("bytes")
+        if not isinstance(rel, str) or not isinstance(expected_hash, str):
+            fail(errors, f"invalid release-manifest entry: {entry}")
+            continue
+        path = ROOT / rel
+        manifest_paths.add(rel)
+        if not path.is_file():
+            fail(errors, f"release-manifest file missing: {rel}")
+            continue
+        data = path.read_bytes()
+        if len(data) != expected_bytes:
+            fail(errors, f"release-manifest byte-count mismatch {rel}: {len(data)} != {expected_bytes}")
+        got = sha256_bytes(data)
+        if got != expected_hash:
+            fail(errors, f"release-manifest SHA-256 mismatch {rel}: {got} != {expected_hash}")
+
+    try:
+        sum_lines = sums_path.read_text(encoding="utf-8").splitlines()
+    except Exception as exc:
+        fail(errors, f"cannot read SHA256SUMS.txt: {exc}")
+        return
+
+    sums = {}
+    for line_no, line in enumerate(sum_lines, 1):
+        if not line.strip():
+            continue
+        parts = line.split("  ", 1)
+        if len(parts) != 2 or len(parts[0]) != 64:
+            fail(errors, f"invalid SHA256SUMS.txt line {line_no}: {line}")
+            continue
+        digest, rel = parts
+        sums[rel] = digest
+
+    required_sum_paths = manifest_paths | {"RELEASE_MANIFEST.json"}
+    missing = sorted(required_sum_paths - set(sums))
+    if missing:
+        fail(errors, f"SHA256SUMS.txt missing release paths: {missing}")
+
+    for rel, expected_hash in sums.items():
+        if rel == "SHA256SUMS.txt":
+            fail(errors, "SHA256SUMS.txt must not contain a self-hash entry")
+            continue
+        path = ROOT / rel
+        if not path.is_file():
+            fail(errors, f"SHA256SUMS.txt file missing: {rel}")
+            continue
+        got = sha256_file(path)
+        if got != expected_hash:
+            fail(errors, f"SHA256SUMS mismatch {rel}: {got} != {expected_hash}")
+
+
 def main() -> int:
     errors: list[str] = []
     validate_critical_hashes(errors)
@@ -191,12 +259,15 @@ def main() -> int:
     validate_output_extraction(errors)
     validate_json(errors)
     validate_privacy(errors)
+    validate_release_integrity_metadata(errors)
     required = [
         "README.md", "LICENSE", "CITATION.cff", "PROVENANCE.md", "REPRODUCE.md", "AI_USE.md", "VERSION",
-        "RELEASE_NOTES_v1.0.1.md",
+        "RELEASE_MANIFEST.json", "SHA256SUMS.txt", "RELEASE_NOTES_v1.0.2.md",
         "docs/E3_FINAL_CONCLUSION.md", "docs/E3A_POST_RUN_AUDIT.md",
         "docs/E3A_RESPONSE_BIAS_CLARIFICATION_2026-10-05.md",
+        "docs/F3_SEMANTIC_SENSITIVITY_2026-10-05.md",
         "docs/POST_RELEASE_CORRECTIONS_2026-10-05.md",
+        "tools/diagnose_f3_semantics.py",
     ]
     for rel in required:
         if not (ROOT / rel).exists():
@@ -210,6 +281,7 @@ def main() -> int:
     print("- frozen package SHA-256: efaf2efbfbbc47b242c81c4493824b3fde8a5aaf95009c2d7b08df472d7e55c8")
     print("- official output SHA-256: 13f5baf79a895f7e720382a378c0ec021d4d5958984c3366d99af0aab73d81a1")
     print("- browseable artifacts match exact ZIP members")
+    print("- release manifest and SHA256SUMS match the working tree")
     print("- JSON/JSONL syntax valid")
     print("- credential/privacy scan passed")
     return 0
