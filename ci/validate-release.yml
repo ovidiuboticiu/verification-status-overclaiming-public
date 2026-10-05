@@ -70,6 +70,9 @@ jobs:
       - name: Recompute E3-A from raw traces
         run: python tools/recalculate_e3a.py
 
+      - name: Run F3 semantic sensitivity diagnostic
+        run: python tools/diagnose_f3_semantics.py
+
       - name: Run exact frozen offline tests
         shell: bash
         run: |
